@@ -1,0 +1,40 @@
+header {
+  height: 10rem;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(-75deg, #efeecf 54%, #ae8d7c 100%);
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      height: 10rem;
+      width: 20rem;
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+      }
+    }
+    h1 {
+      font-family: 'arcade', sans-serif;
+      font-size: 4rem;
+    }
+  }
+
+  article {
+    display: flex;
+    gap: 4rem;
+    .header-buttons {
+      font-family: 'pixel', sans-serif;
+      font-size: 1.7rem;
+      color: #222;
+    }
+  }
+}

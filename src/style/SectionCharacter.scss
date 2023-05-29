@@ -1,0 +1,82 @@
+main {
+    height: 100%;
+    width: 100%;
+  
+    .section-character {
+      background-image: url(./src/resources/img-character.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100rem;
+      width: 136.6rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  
+  
+      .arrow-left {
+        height: 8rem;
+        width: 8rem;
+        rotate: (180deg);
+        fill: whitesmoke;
+        transition: 1s;
+        &:hover{
+          transition: 1s;
+          transform: scale(1.3);
+        }
+      }
+  
+      .arrow-right {
+        height: 8rem;
+        width: 8rem;
+        fill: whitesmoke;
+        transition: 1s;
+        &:hover{
+          transition: 1s;
+          transform: scale(1.3);
+        }
+      }
+  
+      h1 {
+        color: white;
+        font-family: "pixel", sans-serif;
+        font-size: 6rem;
+        text-shadow: 1px 3px 2px #222;
+      }
+  
+      div {
+        height: 60rem;
+        width: 60rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3rem;
+  
+        div {
+          height: 50rem;
+          width: 50rem;
+          border-radius: 10%;
+          background: linear-gradient(160deg, #efeecf 24%, #ae8d7c 80%);
+        }
+  
+        h2 {
+          color: #222;
+          font-family: "pixel", sans-serif;
+          font-size: 2.8rem;
+        }
+  
+        img {
+          height: 25rem;
+          width: 25rem;
+          border-radius: 50%;
+        }
+  
+        p {
+          padding: 2rem;
+          font-family: "pixel", sans-serif;
+          font-size: 1.2rem;
+          text-align: justify;
+        }
+      }
+    }
+  }
