@@ -1,0 +1,64 @@
+footer {
+    height: 24.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+   
+    #div-social {
+        width: 100%;
+        background-color: #1d1a16;
+        box-shadow: 0 0 8px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+
+        span {
+            color: whitesmoke;
+            font-family: 'pixel', sans-serif;
+            font-size: 2rem;
+        }
+
+        svg {
+            height: 4.1rem;
+            width: 4rem;
+        }
+
+        #twitter {
+            fill: #4cbde0c4;
+        }
+
+        #discord {
+            fill: #9CA5FF;
+        }
+
+        #youtube {
+            fill: #c4302b;
+        }
+
+        #twitch {
+            fill: #9361FF;
+        }
+    }
+
+    #div-span {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;        
+
+        span {
+            color: whitesmoke;
+            font-family: 'pixel', sans-serif;
+            font-size: 2rem;
+
+            a {
+                color: whitesmoke;
+            }
+        }
+    }
+}

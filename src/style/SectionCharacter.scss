@@ -7,15 +7,15 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
       height: 100rem;
-      width: 136.6rem;
+      width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: center;
   
   
       .arrow-left {
-        height: 8rem;
-        width: 8rem;
+        height: 6rem;
+        width: 6rem;
         rotate: (180deg);
         fill: whitesmoke;
         transition: 1s;
@@ -26,8 +26,8 @@ main {
       }
   
       .arrow-right {
-        height: 8rem;
-        width: 8rem;
+        height: 6rem;
+        width: 6rem;
         fill: whitesmoke;
         transition: 1s;
         &:hover{
@@ -56,7 +56,7 @@ main {
           height: 50rem;
           width: 50rem;
           border-radius: 10%;
-          background: linear-gradient(160deg, #efeecf 24%, #ae8d7c 80%);
+          background: linear-gradient(45deg, #efeecf 24%, #ae8d7c 80%);
         }
   
         h2 {

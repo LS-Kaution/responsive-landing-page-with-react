@@ -1,8 +1,16 @@
 import './style/Header.scss'
 import './style/SectionCharacter.scss'
+import './style/SectionNews.scss'
+import './style/SectionPlaygame.scss'
+import './style/Footer.scss'
 import HeaderButton from './components/HeaderButton'
-import ArrowSvg from './components/ArrowSvg'
+import ArrowSvg from './components/svg/ArrowSvg'
 import CardCharacter from './components/CardCharacter'
+import News from './components/News'
+import TwitterSvg from './components/svg/TwitterSvg'
+import DiscordSvg from './components/svg/DiscordSvg'
+import YoutubeSvg from './components/svg/YoutubeSvg'
+import TwitchSvg from './components/svg/TwitchSvg'
 
 export default function App() {
   return (
@@ -25,13 +33,30 @@ export default function App() {
           <ArrowSvg className="arrow-left" />
           <div>
             <h1>New characters</h1>
-            <div>
-              <CardCharacter link='./src/resources/character-1.png' title='Pondrea' description='Lorem ipsum dolor sit amet consectetur adipiscing elit, quisque venenatis iaculis aliquet auctor vehicula morbi, taciti dignissim per at lacus himenaeos. Mauris vel tristique ut nostra neque feugiat dignissim etiam class habitasse.' />
-              {/*<CardCharacter link='./src/resources/character-3.png' title='Santoro' description='Lorem ipsum dolor sit amet consectetur adipiscing elit, quisque venenatis iaculis aliquet auctor vehicula morbi, taciti dignissim per at lacus himenaeos. Mauris vel tristique ut nostra neque feugiat dignissim etiam class habitasse.' />*/}
-            </div>
+            <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
           </div>
           <ArrowSvg className="arrow-right" />
         </section>
+        <section className='section-news'>
+          <News link='./src/resources/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
+        </section>
+        <section className='section-playgame'>
+          <h1>Only you PROTECT the kingdom of Lotus</h1>
+        </section>
+        <footer>
+          <div id='div-social'>
+            <span>Follow us on social networks</span>
+            <TwitterSvg />
+            <DiscordSvg />
+            <YoutubeSvg />
+            <TwitchSvg />
+          </div>
+          <img src="./src/resources/footer-prevention.png" />
+          <div id='div-span'>
+            <span>© 2023 Lotus. All rights reserved.</span>
+            <span><a href="">Privacy Policy</a></span>
+          </div>
+        </footer>
       </main>
     </>
   )
