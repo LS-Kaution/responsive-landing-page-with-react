@@ -11,20 +11,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    img {
-      height: 10rem;
-      width: 20rem;
-      transition: 1s;
-
-      &:hover {
-        transition: 1s;
-        transform: scale(1.2);
-      }
+    flex-direction: column;
+    transition: 1.5s;
+    &:hover {
+      transition: 1.5s;
+      transform: rotateY(150deg);
     }
-    h1 {
-      font-family: 'arcade', sans-serif;
-      font-size: 4rem;
+
+    img {
+      height: 8rem;
+      width: 13rem;
     }
   }
 
@@ -32,9 +28,9 @@ header {
     display: flex;
     gap: 4rem;
     .header-buttons {
-      font-family: 'pixel', sans-serif;
-      font-size: 1.7rem;
-      color: #222;
+      font-family: "pixel", sans-serif;
+      font-size: 2rem;
+      color: #551a8b;
     }
   }
 }

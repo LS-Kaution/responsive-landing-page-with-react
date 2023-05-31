@@ -17,8 +17,7 @@ export default function App() {
     <>
       <header>
         <figure>
-          <img src="./src/resources/logo-header.png" alt="logo header" />
-          <h1>LOTUS</h1>
+          <img src="./src/resources/logo.png" alt="logo header" />
         </figure>
         <article>
           <HeaderButton name="Home" />
@@ -32,7 +31,7 @@ export default function App() {
         <section className='section-character'>
           <ArrowSvg className="arrow-left" />
           <div>
-            <h1>New characters</h1>
+            <h2 id='title-section-characters'>New characters</h2>
             <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
           </div>
           <ArrowSvg className="arrow-right" />
@@ -41,7 +40,7 @@ export default function App() {
           <News link='./src/resources/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
         </section>
         <section className='section-playgame'>
-          <h1>Only you PROTECT the kingdom of Lotus</h1>
+          <h2>Only you PROTECT the kingdom of Lotus</h2>
         </section>
         <footer>
           <div id='div-social'>
