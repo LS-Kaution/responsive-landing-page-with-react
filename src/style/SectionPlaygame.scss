@@ -1,18 +1,34 @@
 .section-playgame {
-    height: 55rem;
+  height: 55rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  background-image: url(../resources/img-playgame.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  img {
+    height: 30rem;
+    width: 40rem;
+  }
+
+  div {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: end;
-    gap: 2rem;
-    background-image: url(../resources/img-playgame.png);
-    background-size:cover;
-    background-position: center;
-    background-repeat:no-repeat;
-    
+
     h2 {
-        color: black;
-        font-family: 'arcade', sans-serif;
-        font-size: 6.5rem;
+      color: black;
+      font-family: "arcade", sans-serif;
+      font-size: 6.5rem;
     }
+  }
 }

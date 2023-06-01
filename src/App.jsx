@@ -29,7 +29,8 @@ export default function App() {
       </header>
       <main>
         <section className='section-character'>
-          <ArrowSvg className="arrow-left" />
+          <ArrowSvg className="arrow-left" onClick={e =>
+            alert('onClick')} />
           <div>
             <h2 id='title-section-characters'>New characters</h2>
             <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
@@ -43,7 +44,10 @@ export default function App() {
   <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />*/}
         </section>
         <section className='section-playgame'>
-          <h2>Only you PROTECT the kingdom of Lotus</h2>
+          <img src="./src/resources/play-now.png" />
+          <div>
+            <h2>Only you PROTECT the kingdom of Lotus</h2>
+          </div>
         </section>
         <footer>
           <div id='div-social'>
