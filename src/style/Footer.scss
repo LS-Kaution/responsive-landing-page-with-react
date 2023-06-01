@@ -29,19 +29,43 @@ footer {
         }
 
         #twitter {
+            cursor: pointer;
             fill: #4cbde0c4;
+            transition: 1s;
+            &:hover {
+                transition: 1s;
+                transform: scale(1.2);
+            }
         }
 
         #discord {
+            cursor: pointer;
             fill: #9CA5FF;
+            transition: 1s;
+            &:hover {
+                transition: 1s;
+                transform: scale(1.2);
+            }
         }
 
         #youtube {
+            cursor: pointer;
             fill: #c4302b;
+            transition: 1s;
+            &:hover {
+                transition: 1s;
+                transform: scale(1.2);
+            }
         }
 
         #twitch {
+            cursor: pointer;
             fill: #9361FF;
+            transition: 1s;
+            &:hover {
+                transition: 1s;
+                transform: scale(1.2);
+            }
         }
     }
 

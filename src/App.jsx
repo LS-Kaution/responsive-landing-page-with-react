@@ -38,6 +38,9 @@ export default function App() {
         </section>
         <section className='section-news'>
           <News link='./src/resources/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
+          {/*<News link='./src/resources/news-2.png' title='New potion: Incorporated to all Lotus taverns.' />
+            <News link='./src/resources/news-3.gif' title='New dungeon: In Hitom, discover it.' />
+  <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />*/}
         </section>
         <section className='section-playgame'>
           <h2>Only you PROTECT the kingdom of Lotus</h2>
