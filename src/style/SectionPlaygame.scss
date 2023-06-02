@@ -5,30 +5,64 @@
   justify-content: center;
   align-items: end;
   flex-direction: column;
-  gap: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
   background-image: url(../resources/img-playgame.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  img {
-    height: 30rem;
-    width: 40rem;
+  #container-playnow {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+
+    div {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 3s;
+      &:hover {
+        transition: 0.7s;
+        transform: scale(0.85);
+      }
+ 
+      &:hover h2 {
+        transition: color 0.7s;
+        color: #551a8b;
+      }
+    }
+
+    img {
+      height: 35rem;
+      width: 35rem;
+    }
+
+    h2 {
+      color: red;
+      font-family: "arcade", sans-serif;
+      font-size: 6.5rem;
+      text-shadow: 5px 5px 0 black;
+      transition: color 3s;
+    }
   }
 
-  div {
+  #container-protect {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: end;
 
-    h2 {
-      color: black;
+    h3 {
+      color: white;
       font-family: "arcade", sans-serif;
       font-size: 6.5rem;
+      text-shadow: 5px 5px 0 black;
     }
   }
 }

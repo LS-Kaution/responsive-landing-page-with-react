@@ -4,7 +4,8 @@ import './style/SectionNews.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
 import HeaderButton from './components/HeaderButton'
-import ArrowSvg from './components/svg/ArrowSvg'
+import ArrowLeftSvg from './components/svg/ArrowLeftSvg'
+import ArrowRigthSvg from './components/svg/ArrowRigthSvg'
 import CardCharacter from './components/CardCharacter'
 import News from './components/News'
 import TwitterSvg from './components/svg/TwitterSvg'
@@ -28,14 +29,16 @@ export default function App() {
         </article>
       </header>
       <main>
-        <section className='section-character'>
-          <ArrowSvg className="arrow-left" onClick={e =>
-            alert('onClick')} />
-          <div>
-            <h2 id='title-section-characters'>New characters</h2>
-            <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
+        <section>
+          <div className='section-character'>
+            <ArrowLeftSvg className="arrow-left" onClick={e =>
+              alert('onClick')} />
+            <div>
+              <h2 id='title-section-characters'>New characters</h2>
+              <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
+            </div>
+            <ArrowRigthSvg className="arrow-right" />
           </div>
-          <ArrowSvg className="arrow-right" />
         </section>
         <section className='section-news'>
           <News link='./src/resources/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
@@ -44,9 +47,14 @@ export default function App() {
   <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />*/}
         </section>
         <section className='section-playgame'>
-          <img src="./src/resources/play-now.png" />
-          <div>
-            <h2>Only you PROTECT the kingdom of Lotus</h2>
+          <div id='container-playnow'>
+            <div>
+              <img src="./src/resources/shield-playgame.png" />
+              <h2>PLAY NOW</h2>
+            </div>
+          </div>
+          <div id='container-protect'>
+            <h3>Only you PROTECT the kingdom of Lotus</h3>
           </div>
         </section>
         <footer>
