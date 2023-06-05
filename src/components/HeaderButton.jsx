@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function HeaderButton({ name, link }) {
     return (
         <>
             <button type="button">
-                <a href="{link}" className="header-buttons">{name}</a>
+                <Link to={link} className="header-buttons">{name}</Link>
             </button>
         </>
     )

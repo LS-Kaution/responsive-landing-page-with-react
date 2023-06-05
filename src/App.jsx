@@ -1,3 +1,4 @@
+import { Link, Route, Routes } from 'react-router-dom'
 import './style/Header.scss'
 import './style/SectionCharacter.scss'
 import './style/SectionNews.scss'
@@ -25,7 +26,7 @@ export default function App() {
           <HeaderButton name="Game" />
           <HeaderButton name="Media" />
           <HeaderButton name="Download" />
-          <HeaderButton name="Login" />
+          <HeaderButton link='./src/routes/LoginPage.jsx' name="Login" />
         </article>
       </header>
       <main>
