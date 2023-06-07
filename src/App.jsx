@@ -19,7 +19,7 @@ export default function App() {
     <>
       <header>
         <figure>
-          <img src="./src/resources/logo.png" alt="logo header" />
+          <img src="/logo.png" alt="logo header" />
         </figure>
         <article>
           <HeaderButton name="Home" />
@@ -36,13 +36,13 @@ export default function App() {
               alert('onClick')} />
             <div>
               <h2 id='title-section-characters'>New characters</h2>
-              <CardCharacter link='./src/resources/character-1.png' title='Pondrea' />
+              <CardCharacter link='/character-1.png' title='Pondrea' />
             </div>
             <ArrowRigthSvg className="arrow-right" />
           </div>
         </section>
         <section className='section-news'>
-          <News link='./src/resources/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
+          <News link='/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
           {/*<News link='./src/resources/news-2.png' title='New potion: Incorporated to all Lotus taverns.' />
             <News link='./src/resources/news-3.gif' title='New dungeon: In Hitom, discover it.' />
   <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />*/}
@@ -50,7 +50,7 @@ export default function App() {
         <section className='section-playgame'>
           <div id='container-playnow'>
             <div>
-              <img src="./src/resources/shield-playgame.png" />
+              <img src="/shield-playgame.png" />
               <h2>PLAY NOW</h2>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function App() {
             <YoutubeSvg />
             <TwitchSvg />
           </div>
-          <img src="./src/resources/footer-prevention.png" />
+          <img src="/footer-prevention.png" />
           <div id='div-span'>
             <span>© 2023 Lotus. All rights reserved.</span>
             <span><a href="">Privacy Policy</a></span>

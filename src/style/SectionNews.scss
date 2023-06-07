@@ -2,7 +2,7 @@
   height: 80rem;
   width: 100%;
   overflow: hidden;
-  background-image: url(./src/resources/img-news.png);
+  background-image: url(/img-news.png);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -26,7 +26,7 @@
       text-align: left;
       font-family: "pixel", sans-serif;
       font-size: 4rem;
-      background-image: url(./src/resources/earth.gif);
+      background-image: url(/earth.gif);
       background-position: center;
       -webkit-background-clip: text;
     }

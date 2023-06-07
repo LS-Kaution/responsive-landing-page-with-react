@@ -3,7 +3,7 @@ main {
   width: 100%;
 
   .section-character {
-    background-image: url(./src/resources/img-character.jpg);
+    background-image: url(/img-character.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100rem;
@@ -64,7 +64,7 @@ main {
         color: transparent;
         font-family: "pixel", sans-serif;
         font-size: 5rem;
-        background-image: url(./src/resources/water.gif);
+        background-image: url(/water.gif);
         background-position: center;
         -webkit-background-clip: text;
       }
