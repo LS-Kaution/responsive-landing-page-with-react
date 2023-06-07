@@ -26,7 +26,7 @@ export default function App() {
           <HeaderButton name="Game" />
           <HeaderButton name="Media" />
           <HeaderButton name="Download" />
-          <HeaderButton link='./src/routes/LoginPage.jsx' name="Login" />
+          <HeaderButton link='/login' name="Login" />
         </article>
       </header>
       <main>
