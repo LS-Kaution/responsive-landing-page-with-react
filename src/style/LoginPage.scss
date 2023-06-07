@@ -6,7 +6,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 3rem;
   background-image: url(/img-login-page.png);
   background-repeat: no-repeat;
@@ -68,7 +67,7 @@ section {
       }
     }
 
-    #remember-forgot {
+    .remember-forgot {
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -108,7 +107,7 @@ section {
       font-weight: 600;
     }
 
-    #login-register {
+    .login-register {
       width: 100%;
       display: flex;
       justify-content: center;
