@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function HeaderButton({ name, link }) {
+export default function HeaderButton({ link, name }) {
     return (
         <>
             <button type="button">

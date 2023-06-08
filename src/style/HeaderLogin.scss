@@ -1,0 +1,62 @@
+#header-login {
+  height: 10rem;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8rem;
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1.5s;
+    &:hover {
+      transition: 1.5s;
+      transform: rotateY(150deg);
+    }
+
+    img {
+      cursor: pointer;
+      height: 7rem;
+      width: 11rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 4rem;
+    .header-buttons {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #cfcfcf;
+      &:hover {
+        text-decoration: underline;
+        color: white;
+      }
+    }
+  }
+}
+
+@keyframes underline {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  #header-login {
+    nav {
+      .header-buttons {
+        color: black;
+      }
+    }
+  }
+}

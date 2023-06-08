@@ -1,10 +1,13 @@
 import '../style/LoginPage.scss'
+import '../style/HeaderLogin.scss'
+import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
 export default function LoginPage() {
     return (
         <section>
+            <HeaderLogin />
             <form action="#">
                 <h2>Login</h2>
                 <InputOne type='text' title='Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />

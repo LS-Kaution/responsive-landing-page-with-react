@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
@@ -18,6 +19,7 @@ export default function RegistrationPage() {
 
     return (
         <section>
+            <HeaderLogin />
             <form onSubmit={noSubmit}>
                 <h2>Registration</h2>
 

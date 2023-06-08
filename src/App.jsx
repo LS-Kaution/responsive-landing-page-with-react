@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from 'react-router-dom'
-import './style/Header.scss'
+import './style/HeaderHome.scss'
 import './style/SectionCharacter.scss'
 import './style/SectionNews.scss'
 import './style/SectionPlaygame.scss'
@@ -17,7 +17,7 @@ import TwitchSvg from './components/svg/TwitchSvg'
 export default function App() {
   return (
     <>
-      <header>
+      <header id='header-home'>
         <figure>
           <img src="/logo.png" alt="logo header" />
         </figure>
