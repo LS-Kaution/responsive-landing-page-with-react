@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { supabase } from '../backend/client'
+import { Link } from "react-router-dom";
 import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
@@ -10,20 +12,34 @@ export default function RegistrationPage() {
     const [regterms, setTerms] = useState(false)
     const [regerror, setError] = useState(false)
 
-    const noSubmit = (e) => {
+    async function noSubmit(e) {
         e.preventDefault()
-
-        if (regnickname === "" || regemail === "" || regpassword === "" || regterms === false) {
-            setError(true)
-            return
+        try {
+            const { data, error } = await supabase.auth.signUp({
+                email: regemail,
+                password: regpassword,
+                options: {
+                    data: {
+                        full_name: regnickname,
+                    }
+                }
+            })
+            if (regnickname === "" || regemail === "" || regpassword === "" || regterms === false) {
+                setError(true)
+                return
+            }
+            setError(false)
+            alert('Check your email for verification link')
         }
-        setError(false)
+        catch (error) {
+            console.error(error)
+        }
+
     }
 
     const handleChange = () => {
         setTerms(!regterms);
-      }
-
+    }
     return (
         <section>
             <HeaderLogin />
@@ -37,12 +53,12 @@ export default function RegistrationPage() {
                 <InputOne type='password' value={regpassword} data={e => setRegpassword(e.target.value)} title='Enter a Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
 
                 <InputTwo id='remember-forgot' data={handleChange} check={regterms} title='I agree to the terms & conditions' />
-                
+
                 <button type='submit'>Sign Up</button>
 
                 <InputTwo id='login-register' title="Already have an account?" link='/login' ancor='Sign In' />
-                {regerror && <p>All fields are necessary</p>}
+                {regerror && <p>*** All fields are necessary ***</p>}
             </form>
         </section>
     )
-}
+}    
