@@ -4,23 +4,40 @@ import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 import { useState } from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
+import { supabase } from '../backend/client'
 
 export default function LoginPage() {
+    let navigate = useNavigate()
     const [loginnickname, setLoginnickname] = useState('')
     const [loginpassword, setLoginpassword] = useState('')
     const [loginremember, setRemember] = useState(false)
     const [loginerror, setError] = useState(false)
 
-    function noSubmitLogin(e) {
+    async function noSubmitLogin(e) {
         e.preventDefault()
-        if (loginnickname === "" || loginpassword === "") {
-            setError(true)
-            return
+        try {
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: loginnickname,
+                password: loginpassword,
+            })
+
+            if (loginnickname === "" || loginpassword === "") {
+                setError(true)
+                return
+            }
+            setError(false)
+            setLoginnickname('')
+            setLoginpassword('')
+            setRemember(false)
+            alert('Succesful Login')
+            navigate('/')
+            console.log(data)
+        } catch (error) {
+            console.error(error)
         }
-        setError(false)
-        setLoginnickname('')
-        setLoginpassword('')
-        setRemember(false)
+
+
     }
 
     const handleChangeLogin = () => {
