@@ -1,10 +1,10 @@
-import '../style/LoginPage.scss'
+import '../style/LoginAndRegistration.scss'
 import '../style/HeaderLogin.scss'
 import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 import { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from '../backend/client'
 
 export default function LoginPage() {

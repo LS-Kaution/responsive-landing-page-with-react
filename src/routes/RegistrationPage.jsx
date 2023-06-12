@@ -1,10 +1,13 @@
+import '../style/LoginAndRegistration.scss'
 import { useState } from 'react'
 import { supabase } from '../backend/client'
+import { useNavigate } from 'react-router-dom'
 import HeaderLogin from '../components/HeaderLogin'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
 export default function RegistrationPage() {
+    let navigate = useNavigate()
     const [regnickname, setRegnickname] = useState("")
     const [regemail, setRegemail] = useState("")
     const [regpassword, setRegpassword] = useState("")
@@ -33,6 +36,7 @@ export default function RegistrationPage() {
             setRegpassword('')
             setTerms(false)
             alert('Check your email for verification link')
+            navigate('/login')
         }
         catch (error) {
             console.error(error)

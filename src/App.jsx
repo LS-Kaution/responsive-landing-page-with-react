@@ -22,10 +22,10 @@ export default function App() {
           <img src="/logo.png" alt="logo header" />
         </figure>
         <article>
-          <HeaderButton name="Home" />
+          {/*<HeaderButton name="Home" />
           <HeaderButton name="Game" />
           <HeaderButton name="Media" />
-          <HeaderButton name="Download" />
+          <HeaderButton name="Download" />*/}
           <HeaderButton link='/login' name="Login" />
         </article>
       </header>
