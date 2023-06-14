@@ -9,6 +9,7 @@ import {
 import ErrorPage from "./routes/ErrorPage.jsx"
 import LoginPage from "./routes/LoginPage.jsx"
 import RegistrationPage from './routes/RegistrationPage.jsx';
+import PasswordRecovery from './routes/PasswordRecovery.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "registration",
     element: <RegistrationPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "password-recovery",
+    element: <PasswordRecovery />,
     errorElement: <ErrorPage />,
   },
 ]);

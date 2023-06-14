@@ -22,7 +22,7 @@ export default function HeaderLogin() {
                 <HeaderButton name="Download" />
                 <HeaderButton link='/login' name="Login" />
             </nav>
-            <span onClick={displayActive}><ion-icon name="menu"></ion-icon></span>
+            <span id='span' onClick={displayActive}><ion-icon name="menu"></ion-icon></span>
         </header>
     )
 }

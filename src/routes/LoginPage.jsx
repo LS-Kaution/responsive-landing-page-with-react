@@ -1,11 +1,11 @@
 import '../style/LoginAndRegistration.scss'
 import '../style/HeaderLogin.scss'
-import HeaderLogin from '../components/HeaderLogin'
-import InputOne from '../components/InputOne'
-import InputTwo from '../components/InputTwo'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../backend/client'
+import HeaderLogin from '../components/HeaderLogin'
+import InputOne from '../components/InputOne'
+import InputTwo from '../components/InputTwo'
 
 export default function LoginPage() {
     let navigate = useNavigate()
@@ -45,16 +45,16 @@ export default function LoginPage() {
     }
 
     return (
-        <section>
+        <section className='section-login-reg'>
             <HeaderLogin />
             <form onSubmit={noSubmitLogin}>
-                <h2>Login</h2>
+                <h1>Login</h1>
                 <InputOne type='text' value={loginnickname} data={e => setLoginnickname(e.target.value)} title='Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />
                 <InputOne type='password' value={loginpassword} data={e => setLoginpassword(e.target.value)} title='Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
-                <InputTwo id='remember-forgot' data={handleChangeLogin} check={loginremember} title='Remember me' ancor='Forgot Password?' />
+                <InputTwo id='remember-forgot' data={handleChangeLogin} check={loginremember} title='Remember me' ancor='Forgot Password?' link='/password-recovery' />
                 <button type='submit'>Sign In</button>
                 <InputTwo id='login-register' title="Don't have an account?" link='/registration' ancor='Sign Up' />
-                {loginerror && <p>*** All fields are necessary ***</p>}
+                {loginerror && <p>*** Please, enter your account ***</p>}
             </form>
         </section>
     )
