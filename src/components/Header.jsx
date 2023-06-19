@@ -1,7 +1,8 @@
+import '../style/Header.scss'
 import HeaderButton from './HeaderButton'
 import { useState } from 'react'
 
-export default function HeaderLogin() {
+export default function Header() {
     const [displaynone, setDisplayNone] = useState(false)
     
     function displayActive(){

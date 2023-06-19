@@ -1,15 +1,14 @@
 import '../style/LoginAndRegistration.scss'
-import '../style/HeaderLogin.scss'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../backend/client'
-import HeaderLogin from '../components/HeaderLogin'
+import Header from '../components/Header'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
 export default function LoginPage() {
     let navigate = useNavigate()
-    const [loginnickname, setLoginnickname] = useState('')
+    const [loginemail, setLoginemail] = useState('')
     const [loginpassword, setLoginpassword] = useState('')
     const [loginremember, setRemember] = useState(false)
     const [loginerror, setError] = useState(false)
@@ -18,16 +17,16 @@ export default function LoginPage() {
         e.preventDefault()
         try {
             const { data, error } = await supabase.auth.signInWithPassword({
-                email: loginnickname,
+                email: loginemail,
                 password: loginpassword,
             })
 
-            if (loginnickname === "" || loginpassword === "") {
+            if (loginemail === "" || loginpassword === "") {
                 setError(true)
                 return
             }
             setError(false)
-            setLoginnickname('')
+            setLoginemail('')
             setLoginpassword('')
             setRemember(false)
             alert('Succesful Login')
@@ -46,10 +45,10 @@ export default function LoginPage() {
 
     return (
         <section className='section-login-reg'>
-            <HeaderLogin />
+            <Header />
             <form onSubmit={noSubmitLogin}>
                 <h1>Login</h1>
-                <InputOne type='text' value={loginnickname} data={e => setLoginnickname(e.target.value)} title='Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />
+                <InputOne type='email' value={loginemail} data={e => setLoginemail(e.target.value)} title='Email' icon={<ion-icon name="person-circle"></ion-icon>} />
                 <InputOne type='password' value={loginpassword} data={e => setLoginpassword(e.target.value)} title='Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
                 <InputTwo id='remember-forgot' data={handleChangeLogin} check={loginremember} title='Remember me' ancor='Forgot Password?' link='/password-recovery' />
                 <button type='submit'>Sign In</button>

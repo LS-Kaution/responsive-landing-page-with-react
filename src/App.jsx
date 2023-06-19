@@ -1,10 +1,10 @@
 import { Link, Route, Routes } from 'react-router-dom'
-import './style/HeaderHome.scss'
+import './style/SectionHome.scss'
 import './style/SectionCharacter.scss'
 import './style/SectionNews.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
-import HeaderButton from './components/HeaderButton'
+import Header from './components/Header'
 import ArrowLeftSvg from './components/svg/ArrowLeftSvg'
 import ArrowRigthSvg from './components/svg/ArrowRigthSvg'
 import CardCharacter from './components/CardCharacter'
@@ -17,19 +17,26 @@ import TwitchSvg from './components/svg/TwitchSvg'
 export default function App() {
   return (
     <>
-      <header id='header-home'>
-        <figure>
-          <img src="/logo.png" alt="logo header" />
-        </figure>
-        <article>
-          {/*<HeaderButton name="Home" />
-          <HeaderButton name="Game" />
-          <HeaderButton name="Media" />
-          <HeaderButton name="Download" />*/}
-          <HeaderButton link='/login' name="Login" />
-        </article>
-      </header>
+      <Header />
       <main>
+        <section id='section-home'>
+          <div className='container mother'>
+            <h1>Hunters is an open world mmorpg videogame</h1>
+            <figure>
+              <div className='container child-1'>
+                <img src='/img-home-1.png' alt="Hunters, choice your future" />
+                <p>Protect yourself from deserters</p>
+              </div>
+              <div className='container child-2'>
+                <img src='/img-home-2.png' alt="Hunters, choice your future" />
+                <p>Make friends, belong to a guild and survive</p>
+              </div>
+            </figure>
+            <div className='container child-3'>
+              <p>Your actions have consequences and results. Depending on your class, you will have advantages and disadvantages; have a trade as a baker or be an amazing blacksmith. Take into account that in this world there is real estate, mounts (tameable creatures that are used as means of transportation), a banking system and an endless commerce. </p>
+            </div>
+          </div>
+        </section>
         <section>
           <div className='section-character'>
             <ArrowLeftSvg className="arrow-left" onClick={e =>

@@ -1,5 +1,5 @@
 import '../style/PasswordRecovery.scss'
-import HeaderLogin from "../components/HeaderLogin";
+import Header from "../components/Header";
 import InputOne from "../components/InputOne";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -21,7 +21,7 @@ export default function PasswordRecovery() {
 
     return (
         <section id='section-forgot-password'>
-            <HeaderLogin />
+            <Header />
             <form onSubmit={preventDefault}>
                 <h1>Password recovery</h1>
                 <p id='subtitle'>The one that you use to sign in with.</p>
