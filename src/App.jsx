@@ -1,10 +1,11 @@
-import { Link, Route, Routes } from 'react-router-dom'
 import './style/SectionHome.scss'
 import './style/SectionCharacter.scss'
 import './style/SectionNews.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
 import Header from './components/Header'
+import SectionHomeCard from './components/SectionHomeCard'
+import ManualCarousel from './components/ManualCarousel'
 import ArrowLeftSvg from './components/svg/ArrowLeftSvg'
 import ArrowRigthSvg from './components/svg/ArrowRigthSvg'
 import CardCharacter from './components/CardCharacter'
@@ -15,44 +16,55 @@ import YoutubeSvg from './components/svg/YoutubeSvg'
 import TwitchSvg from './components/svg/TwitchSvg'
 
 export default function App() {
+  const slides = [
+    {
+      title: 'Slide 1',
+      imgmen: '/characters/human-men.png',
+      imggirl: '/characters/human-girl.png',
+      description: 'Descripción del Slide 1',
+    },
+    {
+      title: 'Slide 2',
+      imgmen: '/characters/elf-men.png',
+      imggirl: '/characters/elf-girl.png',
+      description: 'Descripción del Slide 2',
+    },
+    {
+      title: 'Slide 3',
+      imgmen: '/characters/orc-men.png',
+      imggirl: '/characters/orc-girl.png',
+      description: 'Descripción del Slide 3',
+    },
+    {
+      title: 'Slide 4',
+      imgmen: '/characters/deserter-men.png',
+      imggirl: '/characters/deserter-girl.png',
+      description: 'Descripción del Slide 4',
+    },
+  ];
+
   return (
     <>
       <Header />
       <main>
-        <section id='section-home'>
+        <section className='section home'>
           <div className='container mother'>
             <h1>Hunters is an open world mmorpg videogame</h1>
             <figure>
-              <div className='container child-1'>
-                <img src='/img-home-1.png' alt="Hunters, choice your future" />
-                <p>Protect yourself from deserters</p>
-              </div>
-              <div className='container child-2'>
-                <img src='/img-home-2.png' alt="Hunters, choice your future" />
-                <p>Make friends, belong to a guild and survive</p>
-              </div>
+              <SectionHomeCard className='container child-1' src='/img-home-1.png' alt='Deserters, be careful' description='Protect yourself from deserters' />
+              <SectionHomeCard className='container child-2' src='/img-home-2.png' alt='Hunters, choice your future' description='Make friends, belong to a guild and survive' />
             </figure>
-            <div className='container child-3'>
-              <p>Your actions have consequences and results. Depending on your class, you will have advantages and disadvantages; have a trade as a baker or be an amazing blacksmith. Take into account that in this world there is real estate, mounts (tameable creatures that are used as means of transportation), a banking system and an endless commerce. </p>
-            </div>
+            <SectionHomeCard className='container child-3' description='Your actions have consequences and results. Depending on your class, you will have advantages or disadvantages. Take into account that in this world there is real estate, mounts (tameable creatures that are used as means of transportation), a banking system, professions and an endless commerce.' />
           </div>
         </section>
-        <section>
-          <div className='section-character'>
-            <ArrowLeftSvg className="arrow-left" onClick={e =>
-              alert('onClick')} />
-            <div>
-              <h2 id='title-section-characters'>New characters</h2>
-              <CardCharacter link='/character-1.png' title='Pondrea' />
-            </div>
-            <ArrowRigthSvg className="arrow-right" />
-          </div>
+        <section className='section game'>
+          <ManualCarousel slides={slides} />
         </section>
-        <section className='section-news'>
+        {/*          <section className='section-news'>
           <News link='/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
-          {/*<News link='./src/resources/news-2.png' title='New potion: Incorporated to all Lotus taverns.' />
+          <News link='./src/resources/news-2.png' title='New potion: Incorporated to all Lotus taverns.' />
             <News link='./src/resources/news-3.gif' title='New dungeon: In Hitom, discover it.' />
-  <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />*/}
+  <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />
         </section>
         <section className='section-playgame'>
           <div id='container-playnow'>
@@ -78,7 +90,7 @@ export default function App() {
             <span>© 2023 Lotus. All rights reserved.</span>
             <span><a href="">Privacy Policy</a></span>
           </div>
-        </footer>
+            </footer>*/}
       </main>
     </>
   )
