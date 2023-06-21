@@ -22,10 +22,10 @@ export default function App() {
           <div className='container mother'>
             <h1>Hunters is an open world mmorpg videogame</h1>
             <figure>
-              <SectionHomeCard className='container child-1' src='/img-home-1.png' alt='Deserters, be careful' description='Protect yourself from deserters' />
               <SectionHomeCard className='container child-2' src='/img-home-2.png' alt='Hunters, choice your future' description='Make friends, belong to a guild and survive' />
+              <SectionHomeCard className='container child-1' src='/img-home-1.png' alt='Deserters, be careful' description='Protect yourself from deserters' />
             </figure>
-            <SectionHomeCard className='container child-3' description='Your actions have consequences and results. Depending on your class, you will have advantages or disadvantages. Take into account that in this world there is real estate, mounts (tameable creatures that are used as means of transportation), a banking system, professions and an endless commerce.' />
+            <SectionHomeCard className='container child-3' />
           </div>
         </section>
         <section className='section game'>
@@ -34,7 +34,7 @@ export default function App() {
         <section className='section media'>
           <AutomaticCarousel />
         </section>
-        {/* <section className='section-playgame'>
+        {/*<section className='section-playgame'>
           <div id='container-playnow'>
             <div>
               <img src="/shield-playgame.png" />
