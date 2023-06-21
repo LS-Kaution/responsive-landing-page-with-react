@@ -1,15 +1,14 @@
-import '../style/Header.scss'
 import HeaderButton from './HeaderButton'
 import { useState } from 'react'
 
 export default function Header() {
     const [displaynone, setDisplayNone] = useState(false)
-    
-    function displayActive(){
+
+    function displayActive() {
         setDisplayNone(displaynone => !displaynone)
     }
 
-    let toggle = displaynone ? '-active' : ''
+    let toggle = displaynone ? '-active' : '';
 
     return (
         <header id='header-login'>

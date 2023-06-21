@@ -1,48 +1,19 @@
+import './style/Header.scss'
 import './style/SectionHome.scss'
-import './style/SectionCharacter.scss'
-import './style/SectionNews.scss'
+import './style/SectionGame.scss'
+import './style/SectionMedia.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
 import Header from './components/Header'
 import SectionHomeCard from './components/SectionHomeCard'
 import ManualCarousel from './components/ManualCarousel'
-import ArrowLeftSvg from './components/svg/ArrowLeftSvg'
-import ArrowRigthSvg from './components/svg/ArrowRigthSvg'
-import CardCharacter from './components/CardCharacter'
-import News from './components/News'
+import AutomaticCarousel from './components/AutomaticCarousel'
 import TwitterSvg from './components/svg/TwitterSvg'
 import DiscordSvg from './components/svg/DiscordSvg'
 import YoutubeSvg from './components/svg/YoutubeSvg'
 import TwitchSvg from './components/svg/TwitchSvg'
 
 export default function App() {
-  const slides = [
-    {
-      title: 'Slide 1',
-      imgmen: '/characters/human-men.png',
-      imggirl: '/characters/human-girl.png',
-      description: 'Descripción del Slide 1',
-    },
-    {
-      title: 'Slide 2',
-      imgmen: '/characters/elf-men.png',
-      imggirl: '/characters/elf-girl.png',
-      description: 'Descripción del Slide 2',
-    },
-    {
-      title: 'Slide 3',
-      imgmen: '/characters/orc-men.png',
-      imggirl: '/characters/orc-girl.png',
-      description: 'Descripción del Slide 3',
-    },
-    {
-      title: 'Slide 4',
-      imgmen: '/characters/deserter-men.png',
-      imggirl: '/characters/deserter-girl.png',
-      description: 'Descripción del Slide 4',
-    },
-  ];
-
   return (
     <>
       <Header />
@@ -58,15 +29,12 @@ export default function App() {
           </div>
         </section>
         <section className='section game'>
-          <ManualCarousel slides={slides} />
+          <ManualCarousel />
         </section>
-        {/*          <section className='section-news'>
-          <News link='/news-1.png' title='New Maps: These 3 new maps full of adventure will make your days have to be well managed.' />
-          <News link='./src/resources/news-2.png' title='New potion: Incorporated to all Lotus taverns.' />
-            <News link='./src/resources/news-3.gif' title='New dungeon: In Hitom, discover it.' />
-  <News link='./src/resources/news-4.jpg' title='Secret Missions: In the castles of the Viceroyalty of Lotus.' />
+        <section className='section media'>
+          <AutomaticCarousel />
         </section>
-        <section className='section-playgame'>
+        {/* <section className='section-playgame'>
           <div id='container-playnow'>
             <div>
               <img src="/shield-playgame.png" />

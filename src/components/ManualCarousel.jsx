@@ -1,37 +1,59 @@
-import '../style/ManualCarousel.scss'
 import { useState } from 'react';
 
-export default function ManualCarousel({ slides }) {
+export default function ManualCarousel() {
+  const slides = [
+    {
+      title: 'Humans',
+      images: ['/characters/human-men.png', '/characters/human-girl.png'],
+      description: 'Descripción del Slide 1',
+    },
+    {
+      title: 'Orcs',
+      images: ['/characters/orc-men.png', '/characters/orc-girl.png'],
+      description: 'Descripción del Slide 2',
+    },
+    {
+      title: 'Elves',
+      images: ['/characters/elf-men.png', '/characters/elf-girl.png'],
+      description: 'Descripción del Slide 3',
+    },
+    {
+      title: 'Deserters',
+      images: ['/characters/deserter-men.png', '/characters/deserter-girl.png'],
+      description: 'Descripción del Slide 4',
+    },
+  ];
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  function goToPreviousSlide() {
-    setCurrentSlide(prevSlide => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+  function handlePrevSlide() {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
   }
 
-  function goToNextSlide() {
-    setCurrentSlide(prevSlide => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  function handleNextSlide() {
+    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
   }
+
+  const { title, images, description } = slides[currentSlide];
 
   return (
-    <div id="carousel">
-      <button className="prev-button" onClick={goToPreviousSlide}>
-        &lt;
-      </button>
-      <div className="slides-container" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-        {slides.map((slide, index) => (
-          <div className={`slide ${index === currentSlide ? 'active' : ''}`} key={index}>
-            <h2>{slide.title}</h2>
-            <div>
-              <img src={slide.imgmen} alt={slide.title} />
-              <img src={slide.imggirl} alt={slide.title} />
-            </div>
-            <p>{slide.description}</p>
+    <div id='carousel'>
+      <button type='button' onClick={handlePrevSlide}><ion-icon name="caret-back-circle"></ion-icon></button>
+      <div id='carousel-container'>
+        <h2>{title}</h2>
+        <div id='container-img'>
+          <div className='div-img'>
+            <img src={images[0]} alt="Slide 1" />
+            <span>Men</span>
           </div>
-        ))}
+          <div className='div-img'>
+            <img src={images[1]} alt="Slide 2" />
+            <span>Women</span>
+          </div>
+        </div>
+        <p>{description}</p>
       </div>
-      <button className="next-button" onClick={goToNextSlide}>
-        &gt;
-      </button>
+      <button type='button' onClick={handleNextSlide}><ion-icon name="caret-forward-circle"></ion-icon></button>
     </div>
   );
 }
