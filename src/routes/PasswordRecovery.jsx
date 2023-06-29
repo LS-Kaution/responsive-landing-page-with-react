@@ -11,7 +11,7 @@ export default function PasswordRecovery() {
 
     function preventDefault(e) {
         e.preventDefault()
-        if(recovery === ''){
+        if (recovery === '') {
             setError(true)
             return
         }
@@ -20,19 +20,21 @@ export default function PasswordRecovery() {
     }
 
     return (
-        <section id='section-forgot-password'>
+        <>
             <Header />
-            <form onSubmit={preventDefault}>
-                <h1>Password recovery</h1>
-                <p id='subtitle'>The one that you use to sign in with.</p>
-                <InputOne type='email' value={recovery} data={e => setRecovery(e.target.value)} title='Enter your email' icon={<ion-icon name="mail"></ion-icon>} />
-                <button id='button-submit'>Submit</button>
-                <div>
-                    <span id='icon-return'><ion-icon name="arrow-undo"></ion-icon></span>
-                    <Link to='/login'><button id='button-return'>Back to Login</button></Link>
-                </div>
-                {loginerror && <p id='required'>*** Email address is required ***</p>}
-            </form>
-        </section>
+            <section id='section-forgot-password'>
+                <form onSubmit={preventDefault}>
+                    <h1>Password recovery</h1>
+                    <p id='subtitle'>The one that you use to sign in with.</p>
+                    <InputOne type='email' value={recovery} data={e => setRecovery(e.target.value)} title='Enter your email' icon={<ion-icon name="mail"></ion-icon>} />
+                    <button id='button-submit'>Submit</button>
+                    <div>
+                        <span id='icon-return'><ion-icon name="arrow-undo"></ion-icon></span>
+                        <Link to='/login'><button id='button-return'>Back to Login</button></Link>
+                    </div>
+                    {loginerror && <p id='required'>*** Email address is required ***</p>}
+                </form>
+            </section>
+        </>
     )
 }

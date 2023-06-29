@@ -31,10 +31,10 @@ export default function App() {
         <section className='section game'>
           <ManualCarousel />
         </section>
-        <section className='section media'>
+        {/*<section className='section media'>
           <AutomaticCarousel />
         </section>
-        {/*<section className='section-playgame'>
+        <section className='section-playgame'>
           <div id='container-playnow'>
             <div>
               <img src="/shield-playgame.png" />
@@ -44,21 +44,23 @@ export default function App() {
           <div id='container-protect'>
             <h3>Only you PROTECT the kingdom of Lotus</h3>
           </div>
-        </section>
+  </section>*/}
         <footer>
           <div id='div-social'>
             <span>Follow us on social networks</span>
-            <TwitterSvg />
-            <DiscordSvg />
-            <YoutubeSvg />
-            <TwitchSvg />
+            <div id='div-networks'>
+              <TwitterSvg />
+              <DiscordSvg />
+              <YoutubeSvg />
+              <TwitchSvg />
+            </div>
           </div>
           <img src="/footer-prevention.png" />
           <div id='div-span'>
-            <span>© 2023 Lotus. All rights reserved.</span>
+            <span>© 2023 Hunters. All rights reserved.</span>
             <span><a href="">Privacy Policy</a></span>
           </div>
-            </footer>*/}
+        </footer>
       </main>
     </>
   )

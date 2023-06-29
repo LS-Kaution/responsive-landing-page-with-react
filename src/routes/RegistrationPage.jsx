@@ -49,18 +49,20 @@ export default function RegistrationPage() {
     }
 
     return (
-        <section className='section-login-reg'>
+        <>
             <Header />
-            <form onSubmit={noSubmitReg}>
-                <h1>Registration</h1>
-                <InputOne type='text' value={regnickname} data={e => setRegnickname(e.target.value)} title='Enter a Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />
-                <InputOne type='email' value={regemail} data={e => setRegemail(e.target.value)} title='Enter a Email' icon={<ion-icon name="mail"></ion-icon>} />
-                <InputOne type='password' value={regpassword} data={e => setRegpassword(e.target.value)} length={6} title='Enter a Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
-                <InputTwo id='remember-forgot' data={handleChangeReg} check={regterms} title='I agree to the terms & conditions' />
-                <button type='submit'>Sign Up</button>
-                <InputTwo id='login-register' title="Already have an account?" link='/login' ancor='Sign In' />
-                {regerror && <p>*** All fields are necessary ***</p>}
-            </form>
-        </section>
+            <section className='section-login-reg'>
+                <form onSubmit={noSubmitReg}>
+                    <h1>Registration</h1>
+                    <InputOne type='text' value={regnickname} data={e => setRegnickname(e.target.value)} title='Enter a Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />
+                    <InputOne type='email' value={regemail} data={e => setRegemail(e.target.value)} title='Enter a Email' icon={<ion-icon name="mail"></ion-icon>} />
+                    <InputOne type='password' value={regpassword} data={e => setRegpassword(e.target.value)} length={6} title='Enter a Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
+                    <InputTwo id='remember-forgot' data={handleChangeReg} check={regterms} title='I agree to the terms & conditions' />
+                    <button type='submit'>Sign Up</button>
+                    <InputTwo id='login-register' title="Already have an account?" link='/login' ancor='Sign In' />
+                    {regerror && <p>*** All fields are necessary ***</p>}
+                </form>
+            </section>
+        </>
     )
 }    

@@ -1,88 +1,178 @@
 footer {
-    height: 24.3rem;
+  height: 24.3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+
+  #div-social {
     width: 100%;
+    background-color: #1d1a16;
+    box-shadow: 0 0 8px #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-   
+    gap: 5rem;
+    padding: 1rem;
+
+    span {
+      color: whitesmoke;
+      font-family: "pixel", sans-serif;
+      font-size: 2rem;
+    }
+
+    #div-networks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    svg {
+      height: 4.1rem;
+      width: 4rem;
+    }
+
+    #twitter {
+      cursor: pointer;
+      fill: #4cbde0c4;
+      transition: 1s;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+      }
+    }
+
+    #discord {
+      cursor: pointer;
+      fill: #9ca5ff;
+      transition: 1s;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+      }
+    }
+
+    #youtube {
+      cursor: pointer;
+      fill: #c4302b;
+      transition: 1s;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+      }
+    }
+
+    #twitch {
+      cursor: pointer;
+      fill: #9361ff;
+      transition: 1s;
+      &:hover {
+        transition: 1s;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  #div-span {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    span {
+      color: whitesmoke;
+      font-family: "pixel", sans-serif;
+      font-size: 2rem;
+
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  footer {
     #div-social {
-        width: 100%;
-        background-color: #1d1a16;
-        box-shadow: 0 0 8px #000000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        padding: 1rem;
+      gap: 7rem;
 
-        span {
-            color: whitesmoke;
-            font-family: 'pixel', sans-serif;
-            font-size: 2rem;
-        }
+      span {
+        font-size: 1.8rem;
+      }
 
-        svg {
-            height: 4.1rem;
-            width: 4rem;
-        }
-
-        #twitter {
-            cursor: pointer;
-            fill: #4cbde0c4;
-            transition: 1s;
-            &:hover {
-                transition: 1s;
-                transform: scale(1.2);
-            }
-        }
-
-        #discord {
-            cursor: pointer;
-            fill: #9CA5FF;
-            transition: 1s;
-            &:hover {
-                transition: 1s;
-                transform: scale(1.2);
-            }
-        }
-
-        #youtube {
-            cursor: pointer;
-            fill: #c4302b;
-            transition: 1s;
-            &:hover {
-                transition: 1s;
-                transform: scale(1.2);
-            }
-        }
-
-        #twitch {
-            cursor: pointer;
-            fill: #9361FF;
-            transition: 1s;
-            &:hover {
-                transition: 1s;
-                transform: scale(1.2);
-            }
-        }
+      svg {
+        height: 3.5rem;
+      }
     }
 
     #div-span {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;        
-
-        span {
-            color: whitesmoke;
-            font-family: 'pixel', sans-serif;
-            font-size: 2rem;
-
-            a {
-                color: whitesmoke;
-            }
-        }
+      span {
+        font-size: 1.8rem;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  footer {
+    padding-top: 10rem;
+
+    #div-social {
+      flex-direction: column;
+      gap: 2rem;
+
+      span {
+        font-size: 2rem;
+      }
+    }
+
+    #div-span {
+      flex-direction: column;
+      gap: 2rem;
+      padding-bottom: 1.5rem;
+
+      span {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer {
+    #div-social {
+      span {
+        font-size: 1.8rem;
+      }
+    }
+
+    #div-span {
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer {
+    #div-social {
+      span {
+        font-size: 1.45rem;
+      }
+
+      svg {
+        width: 3.2rem;
+      }
+    }
+
+    #div-span {
+      span {
+        font-size: 1.35rem;
+      }
+    }
+  }
 }

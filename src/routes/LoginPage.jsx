@@ -44,17 +44,19 @@ export default function LoginPage() {
     }
 
     return (
-        <section className='section-login-reg'>
-            <Header />
-            <form onSubmit={noSubmitLogin}>
-                <h1>Login</h1>
-                <InputOne type='email' value={loginemail} data={e => setLoginemail(e.target.value)} title='Email' icon={<ion-icon name="person-circle"></ion-icon>} />
-                <InputOne type='password' value={loginpassword} data={e => setLoginpassword(e.target.value)} title='Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
-                <InputTwo id='remember-forgot' data={handleChangeLogin} check={loginremember} title='Remember me' ancor='Forgot Password?' link='/password-recovery' />
-                <button type='submit'>Sign In</button>
-                <InputTwo id='login-register' title="Don't have an account?" link='/registration' ancor='Sign Up' />
-                {loginerror && <p>*** Please, enter your account ***</p>}
-            </form>
-        </section>
+        <>
+            <section className='section-login-reg'>
+                <Header />
+                <form onSubmit={noSubmitLogin}>
+                    <h1>Login</h1>
+                    <InputOne type='email' value={loginemail} data={e => setLoginemail(e.target.value)} title='Email' icon={<ion-icon name="person-circle"></ion-icon>} />
+                    <InputOne type='password' value={loginpassword} data={e => setLoginpassword(e.target.value)} title='Password' icon={<ion-icon name="lock-closed"></ion-icon>} />
+                    <InputTwo id='remember-forgot' data={handleChangeLogin} check={loginremember} title='Remember me' ancor='Forgot Password?' link='/password-recovery' />
+                    <button type='submit'>Sign In</button>
+                    <InputTwo id='login-register' title="Don't have an account?" link='/registration' ancor='Sign Up' />
+                    {loginerror && <p>*** Please, enter your account ***</p>}
+                </form>
+            </section>
+        </>
     )
 }
