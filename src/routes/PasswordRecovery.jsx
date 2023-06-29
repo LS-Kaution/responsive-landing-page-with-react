@@ -21,8 +21,8 @@ export default function PasswordRecovery() {
 
     return (
         <>
-            <Header />
             <section id='section-forgot-password'>
+                <Header />
                 <form onSubmit={preventDefault}>
                     <h1>Password recovery</h1>
                     <p id='subtitle'>The one that you use to sign in with.</p>

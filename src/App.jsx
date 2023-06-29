@@ -31,10 +31,10 @@ export default function App() {
         <section className='section game'>
           <ManualCarousel />
         </section>
-        {/*<section className='section media'>
+        <section className='section media'>
           <AutomaticCarousel />
         </section>
-        <section className='section-playgame'>
+        {/*<section className='section-playgame'>
           <div id='container-playnow'>
             <div>
               <img src="/shield-playgame.png" />

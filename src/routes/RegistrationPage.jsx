@@ -50,8 +50,8 @@ export default function RegistrationPage() {
 
     return (
         <>
-            <Header />
             <section className='section-login-reg'>
+                <Header />
                 <form onSubmit={noSubmitReg}>
                     <h1>Registration</h1>
                     <InputOne type='text' value={regnickname} data={e => setRegnickname(e.target.value)} title='Enter a Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />
