@@ -20,12 +20,7 @@ export default function App() {
       <main>
         <section className='section home'>
           <div className='container mother'>
-            <h1>Hunters is an open world mmorpg videogame</h1>
-            <figure>
-              <SectionHomeCard className='container child-2' src='/img-home-2.png' alt='Hunters, choice your future' description='Make friends, belong to a guild and survive' />
-              <SectionHomeCard className='container child-1' src='/img-home-1.png' alt='Deserters, be careful' description='Protect yourself from deserters' />
-            </figure>
-            <SectionHomeCard className='container child-3' />
+            <h1>HUNTERS</h1>
           </div>
         </section>
         <section className='section game'>
@@ -34,7 +29,7 @@ export default function App() {
         <section className='section media'>
           <AutomaticCarousel />
         </section>
-        {/*<section className='section-playgame'>
+        <section className='section-playgame'>
           <div id='container-playnow'>
             <div>
               <img src="/shield-playgame.png" />
@@ -42,9 +37,9 @@ export default function App() {
             </div>
           </div>
           <div id='container-protect'>
-            <h3>Only you PROTECT the kingdom of Lotus</h3>
+            <h3>Only you PROTECT the kingdom</h3>
           </div>
-  </section>*/}
+        </section>
         <footer>
           <div id='div-social'>
             <span>Follow us on social networks</span>

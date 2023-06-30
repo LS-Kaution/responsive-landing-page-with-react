@@ -2,7 +2,10 @@
   height: 56rem;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(360deg, #25c5a0 10%, #f5f5f5 60%);
+  background-image: url(/public/section-home-end.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   justify-content: center;
 
@@ -16,11 +19,14 @@
     gap: 3rem;
 
     h1 {
-      font-family: "arcade", sans-serif;
-      font-size: 5rem;
-      font-weight: bold;
-      text-align: center;
-      color: red;
+      font-family: 'arcade';
+      font-size: 7.5rem;
+      background: linear-gradient(to right, #11332a, #002b1e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 0px rgba(255, 215, 0, 0.6),
+        0 0 16px rgba(255, 215, 0, 0.6), 0 0 0px rgba(255, 215, 0, 0.6);
     }
 
     figure {
@@ -32,7 +38,7 @@
       .child-1 {
         height: 29.4rem;
         width: 40.4rem;
-      
+
         img {
           height: 26.5rem;
           width: 40rem;
@@ -50,7 +56,7 @@
       .child-2 {
         height: 29.4rem;
         width: 40.4rem;
-     
+
         img {
           height: 26.5rem;
           width: 40rem;
