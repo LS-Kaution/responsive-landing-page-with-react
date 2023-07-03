@@ -5,7 +5,6 @@ import './style/SectionMedia.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
 import Header from './components/Header'
-import SectionHomeCard from './components/SectionHomeCard'
 import ManualCarousel from './components/ManualCarousel'
 import AutomaticCarousel from './components/AutomaticCarousel'
 import TwitterSvg from './components/svg/TwitterSvg'
@@ -19,7 +18,13 @@ export default function App() {
       <Header />
       <main>
         <section className='section home'>
-          <div className='container mother'>
+          <div className='container-mother'>
+            <figure>
+              <img id='app-store' src="/public/home/app-store.png" alt="Available on the App Store" />
+              <img id='epic-games' src="/public/home/epic-games.png" alt="Available in Epic Games" />
+              <img id='steam' src="/public/home/steam.png" alt="Available in Steam" />
+              <img id='play-store' src="/public/home/play-store.png" alt="Available on the Play Store" />
+            </figure>
             <h1>HUNTERS</h1>
           </div>
         </section>
@@ -50,7 +55,7 @@ export default function App() {
               <TwitchSvg />
             </div>
           </div>
-          <img src="/footer-prevention.png" />
+          <img src="/public/footer/footer-prevention.png" />
           <div id='div-span'>
             <span>© 2023 Hunters. All rights reserved.</span>
             <span><a href="">Privacy Policy</a></span>

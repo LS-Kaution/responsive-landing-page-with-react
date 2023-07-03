@@ -224,9 +224,7 @@ export default function ManualCarousel() {
       <div className='carousel container'>
         <button id='prev-slide' type='button' onClick={handlePrevSlide}><ion-icon name="caret-back-circle"></ion-icon></button>
         <div className='carousel card'>
-          <div className='responsive-buttons-div'>
-            <h2>{title}</h2>
-          </div>
+          <h2>{title}</h2>
           <div className='carousel img'>
             <div className='div-img'>
               <img src={images[0]} alt="reference image one" />
@@ -240,10 +238,10 @@ export default function ManualCarousel() {
           {description}
         </div>
         <button id='next-slide' type='button' onClick={handleNextSlide}><ion-icon name="caret-forward-circle"></ion-icon></button>
-        <div className='responsive-buttons-div'>
-          <button type='button' onClick={handlePrevSlide}><ion-icon name="arrow-undo"></ion-icon></button>
-          <button type='button' onClick={handleNextSlide}><ion-icon name="arrow-redo"></ion-icon></button>
-        </div>
+      </div>
+      <div className='responsive-buttons-div'>
+        <button type='button' onClick={handlePrevSlide}><ion-icon name="chevron-back-circle"></ion-icon></button>
+        <button type='button' onClick={handleNextSlide}><ion-icon name="chevron-forward-circle"></ion-icon></button>
       </div>
       <div className='carousel buttons'>
         <button type='button' onClick={() => handleCategoryChange('World')}>World</button>
