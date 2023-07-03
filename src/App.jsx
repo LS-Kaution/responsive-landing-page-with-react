@@ -20,10 +20,10 @@ export default function App() {
         <section className='section home'>
           <div className='container-mother'>
             <figure>
-              <img id='app-store' src="/public/home/app-store.png" alt="Available on the App Store" />
-              <img id='epic-games' src="/public/home/epic-games.png" alt="Available in Epic Games" />
-              <img id='steam' src="/public/home/steam.png" alt="Available in Steam" />
-              <img id='play-store' src="/public/home/play-store.png" alt="Available on the Play Store" />
+              <img id='app-store' src="/home/app-store.png" alt="Available on the App Store" />
+              <img id='epic-games' src="/home/epic-games.png" alt="Available in Epic Games" />
+              <img id='steam' src="/home/steam.png" alt="Available in Steam" />
+              <img id='play-store' src="/home/play-store.png" alt="Available on the Play Store" />
             </figure>
             <h1>HUNTERS</h1>
           </div>
@@ -55,7 +55,7 @@ export default function App() {
               <TwitchSvg />
             </div>
           </div>
-          <img src="/public/footer/footer-prevention.png" />
+          <img src="/footer/footer-prevention.png" />
           <div id='div-span'>
             <span>© 2023 Hunters. All rights reserved.</span>
             <span><a href="">Privacy Policy</a></span>
