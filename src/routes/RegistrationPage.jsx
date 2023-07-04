@@ -2,7 +2,7 @@ import '../style/LoginAndRegistration.scss'
 import { useState } from 'react'
 import { supabase } from '../backend/client'
 import { useNavigate } from 'react-router-dom'
-import Header from '../components/Header'
+import LoginHeader from '../components/LoginHeader'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
@@ -51,7 +51,7 @@ export default function RegistrationPage() {
     return (
         <>
             <section className='section-login-reg'>
-                <Header />
+                <LoginHeader />
                 <form onSubmit={noSubmitReg}>
                     <h1>Registration</h1>
                     <InputOne type='text' value={regnickname} data={e => setRegnickname(e.target.value)} title='Enter a Nickname' icon={<ion-icon name="person-circle"></ion-icon>} />

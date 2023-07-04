@@ -2,15 +2,16 @@
   height: 56rem;
   width: 100%;
   overflow: hidden;
-  background-image: url(/public/home/background-img.png);
+  background-image: url(/public/home/background-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 92%, 50% 100%, 0% 92%);
   display: flex;
   justify-content: center;
 
   .container-mother {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
     display: flex;

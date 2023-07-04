@@ -1,10 +1,10 @@
-import './style/Header.scss'
+import './style/PrincipalHeader.scss'
 import './style/SectionHome.scss'
 import './style/SectionGame.scss'
 import './style/SectionMedia.scss'
 import './style/SectionPlaygame.scss'
 import './style/Footer.scss'
-import Header from './components/Header'
+import PrincipalHeader from './components/PrincipalHeader'
 import ManualCarousel from './components/ManualCarousel'
 import AutomaticCarousel from './components/AutomaticCarousel'
 import TwitterSvg from './components/svg/TwitterSvg'
@@ -15,7 +15,7 @@ import TwitchSvg from './components/svg/TwitchSvg'
 export default function App() {
   return (
     <>
-      <Header />
+      <PrincipalHeader />
       <main>
         <section className='section home'>
           <div className='container-mother'>

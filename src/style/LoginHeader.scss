@@ -1,0 +1,130 @@
+#login-header {
+  height: 10rem;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8rem;
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1.5s;
+    &:hover {
+      transition: 1.5s;
+      transform: rotateY(150deg);
+    }
+
+    img {
+      cursor: pointer;
+      height: 7rem;
+      width: 11rem;
+    }
+  }
+
+  .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    .header-buttons {
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: #cfcfcf;
+      &:hover {
+        text-decoration: underline;
+        color: white;
+      }
+    }
+  }
+}
+
+#span {
+  cursor: pointer;
+  position: absolute;
+  right: 20%;
+  display: none;
+  font-size: 3.5rem;
+  color: #cfcfcf;
+}
+
+@keyframes underline {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #login-header {
+    transition: 0.2s;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #login-header {
+    padding: 3% 3%;
+    transition: 0.2s;
+    figure {
+      position: relative;
+      right: 30%;
+    }
+    .check {
+      display: none;
+    }
+    .check-active {
+      z-index: 99;
+      position: absolute;
+      background-color: white;
+      border-radius: 3rem 0 3rem 3rem;
+      top: 7.5%;
+      bottom: 0;
+      right: 20.6%;
+      height: 28rem;
+      width: 20rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.5rem;
+      .header-buttons {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.2rem;
+        color: #222;
+        &:hover {
+          text-decoration: none;
+          color: red;
+        }
+      }
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #login-header {
+    figure {
+      position: relative;
+      right: 35%;
+    }
+    .check-active {
+      height: 23rem;
+      width: 17rem;
+      right: 10.8%;
+      .header-buttons {
+        font-size: 1.7rem;
+      }
+    }
+    span {
+      right: 10%;
+    }
+  }
+}

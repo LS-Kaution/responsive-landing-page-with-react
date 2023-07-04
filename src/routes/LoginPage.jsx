@@ -1,8 +1,9 @@
 import '../style/LoginAndRegistration.scss'
+import '../style/LoginHeader.scss'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../backend/client'
-import Header from '../components/Header'
+import LoginHeader from '../components/LoginHeader'
 import InputOne from '../components/InputOne'
 import InputTwo from '../components/InputTwo'
 
@@ -46,7 +47,7 @@ export default function LoginPage() {
     return (
         <>
             <section className='section-login-reg'>
-                <Header />
+                <LoginHeader />
                 <form onSubmit={noSubmitLogin}>
                     <h1>Login</h1>
                     <InputOne type='email' value={loginemail} data={e => setLoginemail(e.target.value)} title='Email' icon={<ion-icon name="person-circle"></ion-icon>} />

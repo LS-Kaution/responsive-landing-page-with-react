@@ -1,7 +1,7 @@
 import HeaderButton from './HeaderButton'
 import { useState } from 'react'
 
-export default function Header() {
+export default function PrincipalHeader() {
     const [displaynone, setDisplayNone] = useState(false)
 
     function displayActive() {
@@ -11,7 +11,7 @@ export default function Header() {
     let toggle = displaynone ? '-active' : '';
 
     return (
-        <header id='header-login'>
+        <header id='principal-header'>
             <figure>
                 <img src="/img-logo.png" alt="logo of header" />
             </figure>
