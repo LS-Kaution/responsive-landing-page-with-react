@@ -77,6 +77,11 @@ footer {
     }
   }
 
+  img {
+    height: 5.4rem;
+    width: 20.3rem;
+  }
+
   #div-span {
     width: 100%;
     display: flex;
@@ -131,6 +136,7 @@ footer {
     }
 
     #div-span {
+      background-color: #222;
       flex-direction: column;
       gap: 2rem;
       padding-bottom: 1.5rem;

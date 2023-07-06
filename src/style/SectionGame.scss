@@ -35,9 +35,11 @@
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
-
-        &:active {
-          animation: opacity ease-in-out;
+        opacity: 1;
+        transition: opacity 0.5s;
+      
+        &.hidden {
+          opacity: 0;
         }
 
         h2 {
@@ -399,15 +401,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 100%;
   }
 }

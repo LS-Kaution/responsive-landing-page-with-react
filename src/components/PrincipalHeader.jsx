@@ -13,7 +13,7 @@ export default function PrincipalHeader() {
     return (
         <header id='principal-header'>
             <figure>
-                <img src="/img-logo.png" alt="logo of header" />
+                <img src="/header/img-logo.webp" alt="logo of header" />
             </figure>
             <nav className={`check${toggle}`}>
                 <HeaderButton link='/' name="Home" />

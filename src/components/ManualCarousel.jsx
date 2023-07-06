@@ -7,7 +7,7 @@ export default function ManualCarousel() {
     World: [
       {
         title: 'Decisions',
-        images: ['/game/world/decisions-1.jpg', '/game/world/decisions-2.png'],
+        images: ['/game/world/decisions-1.webp', '/game/world/decisions-2.webp'],
         description:
           <p className='source-description decisions'>
             Your actions have consequences and results. Depending on your class, you will have advantages or disadvantages. Take into account that in this world there is real estate, mounts (tameable creatures that are used as means of transportation), a banking system, professions and an endless commerce.
@@ -15,7 +15,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Occupations',
-        images: ['/game/world/occupations-1.png', '/game/world/occupations-2.png'],
+        images: ['/game/world/occupations-1.webp', '/game/world/occupations-2.webp'],
         description:
           <div className='source-description occupations'>
             In the world of Hunters, there are 10 different professions in which you can perform 2 at 100% of learning and working capacity; and 1 at 50% of learning and working capacity.
@@ -29,7 +29,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Market',
-        images: ['/game/world/market-1.jpg', '/game/world/market-2.png'],
+        images: ['/game/world/market-1.webp', '/game/world/market-2.webp'],
         description:
           <div className='source-description market'>
             The marketplace is a place where valuable goods are exchanged within Hunters, it is also where players from all over the world gather to swap stories, share strategies and establish alliances. Become a respected and recognized merchant in the community, or simply enjoy the lively atmosphere as you explore the market's offerings and hidden treasures.
@@ -49,7 +49,7 @@ export default function ManualCarousel() {
     Breeds: [
       {
         title: 'Humans',
-        images: ['/game/breeds/human-men.png', '/game/breeds/human-girl.png'],
+        images: ['/game/breeds/human-men.webp', '/game/breeds/human-girl.webp'],
         description:
           <div className='source-description humans'>
             With their cunning and determination, humans excel in a variety of skills and roles. From noble knights to wise wizards, humans excel in their ability to adapt to any challenge and their ability to forge alliances with other races.
@@ -74,7 +74,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Orcs',
-        images: ['/game/breeds/orc-men.png', '/game/breeds/orc-girl.png'],
+        images: ['/game/breeds/orc-men.webp', '/game/breeds/orc-girl.webp'],
         description:
           <div className='source-description orcs'>
             Orcs are a strong and formidable race, with a fierce and warlike nature. With their physical endurance and thirst for battle, orcs make excellent warriors and fearsome barbarians. Although they may appear intimidating, orcs value loyalty and camaraderie, and pride themselves on their code of honor and bravery in battle.
@@ -99,7 +99,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Elves',
-        images: ['/game/breeds/elf-men.png', '/game/breeds/elf-girl.png'],
+        images: ['/game/breeds/elf-men.webp', '/game/breeds/elf-girl.webp'],
         description:
           <div className='source-description elves'>
             Elves, ethereal and graceful beings, are known for their connection with nature and their mastery of arcane magic. Their elegance and agility make them expert archers and powerful magicians.
@@ -124,7 +124,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Deserters',
-        images: ['/game/breeds/deserter-men.png', '/game/breeds/deserter-girl.png'],
+        images: ['/game/breeds/deserter-men.webp', '/game/breeds/deserter-girl.webp'],
         description:
           <div className='source-description deserters'>
             Emerging from diverse backgrounds and cultures, deserters have left their former factions or societies for different reasons. These renegades have found their own identity and have developed unique skills, adapting to life on the margins of society.
@@ -151,7 +151,7 @@ export default function ManualCarousel() {
     Classes: [
       {
         title: 'Fighters',
-        images: ['/game/classes/warrior.jpg', '/game/classes/archer.jpg'],
+        images: ['/game/classes/warrior.webp', '/game/classes/archer.webp'],
         description:
           <div className='source-description fighters'>
             <span>
@@ -169,7 +169,7 @@ export default function ManualCarousel() {
       },
       {
         title: 'Sorcerers',
-        images: ['/game/classes/wizard.png', '/game/classes/priest.png'],
+        images: ['/game/classes/wizard.webp', '/game/classes/priest.webp'],
         description:
           <div className='source-description sorcerers'>
             <span>
@@ -202,6 +202,7 @@ export default function ManualCarousel() {
         prevSlide.index === 0 ? slides[prevSlide.category].length - 1 : prevSlide.index - 1;
       return { ...prevSlide, index: prevIndex };
     });
+    handleToggleVisibility
   }
 
   function handleNextSlide() {
@@ -210,6 +211,7 @@ export default function ManualCarousel() {
         prevSlide.index === slides[prevSlide.category].length - 1 ? 0 : prevSlide.index + 1;
       return { ...prevSlide, index: nextIndex };
     });
+    handleToggleVisibility
   }
 
   function handleCategoryChange(category) {
@@ -219,19 +221,25 @@ export default function ManualCarousel() {
     });
   }
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleToggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
   return (
     <div id='carousel'>
       <div className='carousel container'>
         <button id='prev-slide' type='button' onClick={handlePrevSlide}><ion-icon name="caret-back-circle"></ion-icon></button>
-        <div className='carousel card'>
+        <div className={`carousel card${isVisible ? '' : 'hidden'}`}>
           <h2>{title}</h2>
           <div className='carousel img'>
             <div className='div-img'>
-              <img src={images[0]} alt="reference image one" />
+              <img src={images[0]} alt="Reference image one" />
               <span>{statusOne}</span>
             </div>
             <div className='div-img'>
-              <img src={images[1]} alt="reference image two" />
+              <img src={images[1]} alt="Reference image two" />
               <span>{statusTwo}</span>
             </div>
           </div>
