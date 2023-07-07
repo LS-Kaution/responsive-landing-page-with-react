@@ -230,7 +230,7 @@ export default function ManualCarousel() {
   return (
     <div id='carousel'>
       <div className='carousel container'>
-        <button id='prev-slide' type='button' onClick={handlePrevSlide}><ion-icon name="caret-back-circle"></ion-icon></button>
+        <span className='prev-slide' onClick={handlePrevSlide}><ion-icon name="caret-back-circle"></ion-icon></span>
         <div className={`carousel card${isVisible ? '' : 'hidden'}`}>
           <h2>{title}</h2>
           <div className='carousel img'>
@@ -245,11 +245,11 @@ export default function ManualCarousel() {
           </div>
           {description}
         </div>
-        <button id='next-slide' type='button' onClick={handleNextSlide}><ion-icon name="caret-forward-circle"></ion-icon></button>
+        <span className='next-slide' onClick={handleNextSlide}><ion-icon name="caret-forward-circle"></ion-icon></span>
       </div>
       <div className='responsive-buttons-div'>
-        <button type='button' onClick={handlePrevSlide}><ion-icon name="chevron-back-circle"></ion-icon></button>
-        <button type='button' onClick={handleNextSlide}><ion-icon name="chevron-forward-circle"></ion-icon></button>
+        <span className='prev-slide' onClick={handlePrevSlide}><ion-icon name="chevron-back-circle"></ion-icon></span>
+        <span className='next-slide' onClick={handleNextSlide}><ion-icon name="chevron-forward-circle"></ion-icon></span>
       </div>
       <div className='carousel buttons'>
         <button type='button' onClick={() => handleCategoryChange('World')}>World</button>

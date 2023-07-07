@@ -37,7 +37,7 @@ export default function App() {
         <section className='section-playgame'>
           <div id='container-playnow'>
             <div>
-              <img src="/playgame/shield-playgame.webp" />
+              <img src="/playgame/shield-playgame.webp" alt='Play now' />
               <h2>PLAY NOW</h2>
             </div>
           </div>
